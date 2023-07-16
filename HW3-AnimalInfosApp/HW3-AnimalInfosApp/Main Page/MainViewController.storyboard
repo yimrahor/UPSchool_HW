@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Y6W-OH-hqX" customClass="MainViewController" customModule="HW3_AnimalInfosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="820"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ii-t7-Ha0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-EL-ozd" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="820"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWm-DQ-oXN" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="20" width="180" height="180"/>
+                                                <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="RUW-wx-P5q"/>
+                                                    <constraint firstAttribute="width" constant="180" id="oxB-g1-BHk"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3X-en-2vQ" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="203" y="20" width="180" height="180"/>
+                                                <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="M5G-RQ-hmL"/>
+                                                    <constraint firstAttribute="height" constant="180" id="g2E-6c-zUf"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBU-5j-BpC" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="220" width="180" height="180"/>
+                                                <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="6a8-H1-NSL"/>
+                                                    <constraint firstAttribute="height" constant="180" id="BTh-SR-N6b"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-u5-DdQ" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="203" y="220" width="180" height="180"/>
+                                                <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="srB-cF-CgP"/>
+                                                    <constraint firstAttribute="height" constant="180" id="xc2-kO-Vtn"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k19-SG-c3j" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="420" width="180" height="180"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="VO4-eo-WRi"/>
+                                                    <constraint firstAttribute="height" constant="180" id="mO9-OC-6ks"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5H-f9-uvc" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="203" y="420" width="180" height="180"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="eOY-QA-kAu"/>
+                                                    <constraint firstAttribute="width" constant="180" id="yVV-0n-8J9"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAq-On-Kc3" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="620" width="180" height="180"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="ajx-eA-fwH"/>
+                                                    <constraint firstAttribute="width" constant="180" id="nmt-Ic-b0p"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1C-hA-YaG" customClass="AnimalView" customModule="HW3_AnimalInfosApp" customModuleProvider="target">
+                                                <rect key="frame" x="203" y="620" width="180" height="180"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="dFH-6e-Nuo"/>
+                                                    <constraint firstAttribute="height" constant="180" id="kb5-08-ddA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="L3X-en-2vQ" firstAttribute="top" secondItem="eiH-EL-ozd" secondAttribute="top" constant="20" id="Ggp-4D-hZb"/>
+                                            <constraint firstItem="U5H-f9-uvc" firstAttribute="top" secondItem="bk2-u5-DdQ" secondAttribute="bottom" constant="20" id="IFb-Km-xeG"/>
+                                            <constraint firstItem="HWm-DQ-oXN" firstAttribute="leading" secondItem="eiH-EL-ozd" secondAttribute="leading" constant="10" id="NIE-bO-SGj"/>
+                                            <constraint firstItem="YBU-5j-BpC" firstAttribute="leading" secondItem="eiH-EL-ozd" secondAttribute="leading" constant="10" id="PFO-kg-a3E"/>
+                                            <constraint firstAttribute="trailing" secondItem="T1C-hA-YaG" secondAttribute="trailing" constant="10" id="UWf-Ih-G06"/>
+                                            <constraint firstItem="pAq-On-Kc3" firstAttribute="top" secondItem="k19-SG-c3j" secondAttribute="bottom" constant="20" id="YfP-QF-BnZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="bk2-u5-DdQ" secondAttribute="trailing" constant="10" id="ZPg-VT-dap"/>
+                                            <constraint firstAttribute="trailing" secondItem="U5H-f9-uvc" secondAttribute="trailing" constant="10" id="a71-xe-lbj"/>
+                                            <constraint firstItem="HWm-DQ-oXN" firstAttribute="top" secondItem="eiH-EL-ozd" secondAttribute="top" constant="20" id="aSq-qD-l3F"/>
+                                            <constraint firstItem="YBU-5j-BpC" firstAttribute="top" secondItem="HWm-DQ-oXN" secondAttribute="bottom" constant="20" id="nKI-E2-Xw2"/>
+                                            <constraint firstItem="k19-SG-c3j" firstAttribute="leading" secondItem="eiH-EL-ozd" secondAttribute="leading" constant="10" id="s38-0Q-qLm"/>
+                                            <constraint firstItem="pAq-On-Kc3" firstAttribute="leading" secondItem="eiH-EL-ozd" secondAttribute="leading" constant="10" id="tta-e0-gkj"/>
+                                            <constraint firstItem="k19-SG-c3j" firstAttribute="top" secondItem="YBU-5j-BpC" secondAttribute="bottom" constant="20" id="vkH-lH-5W2"/>
+                                            <constraint firstItem="T1C-hA-YaG" firstAttribute="top" secondItem="U5H-f9-uvc" secondAttribute="bottom" constant="20" id="xPw-fX-Bgj"/>
+                                            <constraint firstAttribute="height" constant="820" id="xzB-7A-AOd"/>
+                                            <constraint firstAttribute="trailing" secondItem="L3X-en-2vQ" secondAttribute="trailing" constant="10" id="yg4-RU-8P7"/>
+                                            <constraint firstItem="bk2-u5-DdQ" firstAttribute="top" secondItem="L3X-en-2vQ" secondAttribute="bottom" constant="20" id="zwO-2T-mtd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eiH-EL-ozd" firstAttribute="leading" secondItem="6ii-t7-Ha0" secondAttribute="leading" id="DQ9-2v-m2Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="eiH-EL-ozd" secondAttribute="bottom" id="RfJ-NU-V5t"/>
+                                    <constraint firstAttribute="trailing" secondItem="eiH-EL-ozd" secondAttribute="trailing" id="cPY-cQ-ygz"/>
+                                    <constraint firstItem="eiH-EL-ozd" firstAttribute="top" secondItem="6ii-t7-Ha0" secondAttribute="top" id="ext-RJ-iBT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6ii-t7-Ha0" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="2aj-iy-02R"/>
+                            <constraint firstItem="6ii-t7-Ha0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4hj-4t-xhH"/>
+                            <constraint firstItem="eiH-EL-ozd" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="Hpd-nX-H3g"/>
+                            <constraint firstItem="6ii-t7-Ha0" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="blO-co-k32"/>
+                            <constraint firstItem="6ii-t7-Ha0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="v5g-5o-bKn"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="820"/>
+                    <connections>
+                        <outlet property="cheetah" destination="HWm-DQ-oXN" id="Egy-ub-1t7"/>
+                        <outlet property="elephant" destination="L3X-en-2vQ" id="Itt-V8-Dos"/>
+                        <outlet property="giraffe" destination="YBU-5j-BpC" id="OUT-Sg-TaM"/>
+                        <outlet property="gorilla" destination="bk2-u5-DdQ" id="JYK-bD-eCx"/>
+                        <outlet property="hippo" destination="k19-SG-c3j" id="78x-6L-q1A"/>
+                        <outlet property="lion" destination="U5H-f9-uvc" id="OzU-t0-0Uo"/>
+                        <outlet property="ostrich" destination="pAq-On-Kc3" id="fvC-HB-hJz"/>
+                        <outlet property="zebra" destination="T1C-hA-YaG" id="Lkg-c9-clw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+</document>
