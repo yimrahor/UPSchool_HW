@@ -25,6 +25,7 @@
 		E51B4BAE2A6441F6000B8E03 /* giraffe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E51B4BA62A6441F5000B8E03 /* giraffe.mp4 */; };
 		E51B4BAF2A6441F6000B8E03 /* hippo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E51B4BA72A6441F6000B8E03 /* hippo.mp4 */; };
 		E51B4BB02A6441F6000B8E03 /* ostrich.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E51B4BA82A6441F6000B8E03 /* ostrich.mp4 */; };
+		E51B4BB22A646642000B8E03 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51B4BB12A646642000B8E03 /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E51B4BA62A6441F5000B8E03 /* giraffe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = giraffe.mp4; sourceTree = "<group>"; };
 		E51B4BA72A6441F6000B8E03 /* hippo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hippo.mp4; sourceTree = "<group>"; };
 		E51B4BA82A6441F6000B8E03 /* ostrich.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ostrich.mp4; sourceTree = "<group>"; };
+		E51B4BB12A646642000B8E03 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				E51B4B922A641AD8000B8E03 /* _Component */,
 				E51B4B8E2A640EC4000B8E03 /* MainViewController.swift */,
 				E51B4B902A640F54000B8E03 /* MainViewController.storyboard */,
+				E51B4BB12A646642000B8E03 /* Main.swift */,
 			);
 			path = "Main Page";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51B4BB22A646642000B8E03 /* Main.swift in Sources */,
 				E51B4B9D2A64335C000B8E03 /* WebViewController.swift in Sources */,
 				E51B4B942A641AFC000B8E03 /* AnimalView.swift in Sources */,
 				E51B4B8F2A640EC4000B8E03 /* MainViewController.swift in Sources */,

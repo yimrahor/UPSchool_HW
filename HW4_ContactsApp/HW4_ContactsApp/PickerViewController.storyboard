@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" id="Y6W-OH-hqX" customClass="PickerViewController" customModule="HW4_ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1JK-lp-Ph1">
+                                <rect key="frame" x="0.0" y="645" width="393" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vN8-VO-BYy">
+                                        <rect key="frame" x="305" y="8" width="80" height="29"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Ogm-ww-6KP"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done">
+                                            <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="doneButtonAct:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vbF-gC-qbJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5B-Dg-2eW">
+                                        <rect key="frame" x="8" y="8" width="80" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="RpT-bo-Uij"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonAct:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Eo-GD-0gX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHR-rL-Pwz">
+                                        <rect key="frame" x="150.66666666666666" y="12" width="92" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="L5B-Dg-2eW" secondAttribute="bottom" constant="8" id="5m4-8A-G7P"/>
+                                    <constraint firstAttribute="bottom" secondItem="vN8-VO-BYy" secondAttribute="bottom" constant="8" id="6im-N1-Lv0"/>
+                                    <constraint firstAttribute="height" constant="45" id="70C-ue-e5M"/>
+                                    <constraint firstItem="vN8-VO-BYy" firstAttribute="top" secondItem="1JK-lp-Ph1" secondAttribute="top" constant="8" id="8tH-MR-gM2"/>
+                                    <constraint firstAttribute="trailing" secondItem="vN8-VO-BYy" secondAttribute="trailing" constant="8" id="MhA-Zg-0fZ"/>
+                                    <constraint firstItem="mHR-rL-Pwz" firstAttribute="centerX" secondItem="1JK-lp-Ph1" secondAttribute="centerX" id="WNO-Pi-aho"/>
+                                    <constraint firstItem="mHR-rL-Pwz" firstAttribute="centerY" secondItem="1JK-lp-Ph1" secondAttribute="centerY" id="XgB-o7-hmA"/>
+                                    <constraint firstItem="L5B-Dg-2eW" firstAttribute="leading" secondItem="1JK-lp-Ph1" secondAttribute="leading" constant="8" id="d7w-Hs-xrM"/>
+                                    <constraint firstItem="L5B-Dg-2eW" firstAttribute="top" secondItem="1JK-lp-Ph1" secondAttribute="top" constant="8" id="s6K-Au-nln"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Doq-xk-HYb">
+                                <rect key="frame" x="0.0" y="690" width="393" height="162"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Qhq-bt-ZAq"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1JK-lp-Ph1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FSh-Jb-hiq"/>
+                            <constraint firstItem="Doq-xk-HYb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="adl-BJ-EsT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1JK-lp-Ph1" secondAttribute="trailing" id="hS1-TM-3p4"/>
+                            <constraint firstItem="Doq-xk-HYb" firstAttribute="top" secondItem="1JK-lp-Ph1" secondAttribute="bottom" id="kIq-Nt-wdw"/>
+                            <constraint firstAttribute="bottom" secondItem="Doq-xk-HYb" secondAttribute="bottom" id="maC-aA-dSL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Doq-xk-HYb" secondAttribute="trailing" id="tFg-g5-FAt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterPickerView" destination="Doq-xk-HYb" id="xra-3R-STM"/>
+                        <outlet property="labelPickerView" destination="mHR-rL-Pwz" id="t0w-GQ-wsf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
