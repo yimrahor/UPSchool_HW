@@ -70,22 +70,46 @@
 		E51B4D6C2A6BECA8000B8E03 /* HW4_ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
+				E51B4DF42A704A36000B8E03 /* Model */,
+				E51B4DF52A704A4F000B8E03 /* View */,
 				E51B4D6D2A6BECA8000B8E03 /* AppDelegate.swift */,
 				E51B4D6F2A6BECA8000B8E03 /* SceneDelegate.swift */,
-				E51B4D852A6C37AF000B8E03 /* PickerViewController.swift */,
-				E51B4D872A6C384E000B8E03 /* PickerViewController.storyboard */,
-				E51B4D832A6BF77C000B8E03 /* Contacts.swift */,
-				E51B4D812A6BF503000B8E03 /* ContactTableViewCell.swift */,
-				E51B4D712A6BECA8000B8E03 /* ViewController.swift */,
 				E51B4D732A6BECA8000B8E03 /* Main.storyboard */,
-				E51B4D8B2A6D36FD000B8E03 /* ContactDetails.swift */,
 				E51B4D892A6D36D8000B8E03 /* ContactDetails.storyboard */,
-				E51B4D8D2A6D5907000B8E03 /* ContactDetailsViewCell.swift */,
+				E51B4D872A6C384E000B8E03 /* PickerViewController.storyboard */,
 				E51B4D762A6BECA9000B8E03 /* Assets.xcassets */,
 				E51B4D782A6BECA9000B8E03 /* LaunchScreen.storyboard */,
 				E51B4D7B2A6BECA9000B8E03 /* Info.plist */,
 			);
 			path = HW4_ContactsApp;
+			sourceTree = "<group>";
+		};
+		E51B4DF42A704A36000B8E03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E51B4D832A6BF77C000B8E03 /* Contacts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E51B4DF52A704A4F000B8E03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E51B4DF62A704AF1000B8E03 /* Cell */,
+				E51B4D712A6BECA8000B8E03 /* ViewController.swift */,
+				E51B4D8B2A6D36FD000B8E03 /* ContactDetails.swift */,
+				E51B4D852A6C37AF000B8E03 /* PickerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E51B4DF62A704AF1000B8E03 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E51B4D812A6BF503000B8E03 /* ContactTableViewCell.swift */,
+				E51B4D8D2A6D5907000B8E03 /* ContactDetailsViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

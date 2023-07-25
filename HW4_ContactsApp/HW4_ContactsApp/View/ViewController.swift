@@ -83,11 +83,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        
         let vc = ContactDetails.instantiateFromStoryboard(String(describing: ContactDetails.self))
         
         vc.imageName = filterPeople(indexPath.section)[indexPath.row].image
         vc.labelName = filterPeople(indexPath.section)[indexPath.row].title
         vc.cT = filterPeople(indexPath.section)[indexPath.row].contactType
+        
         
         self.navigationController?.show(vc, sender: nil)
     }
@@ -140,7 +142,7 @@ extension UIViewController {
     
     private static func instantiateFromStoryboardHelper<T>(_ name: String) -> T {
         let storyboard = UIStoryboard(name: name, bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! T
+        let controller = storyboard.instantiateViewController(withIdentifier: "ContactDetails") as! T
         return controller
     }
 }
