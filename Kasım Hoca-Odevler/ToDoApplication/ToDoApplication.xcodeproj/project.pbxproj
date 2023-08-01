@@ -65,6 +65,7 @@
 				E507CB662A791A69005198C3 /* AppDelegate.swift */,
 				E507CB682A791A69005198C3 /* SceneDelegate.swift */,
 				E507CB7A2A791A7A005198C3 /* ui */,
+				E507CB802A795D57005198C3 /* data */,
 				E507CB6C2A791A69005198C3 /* Main.storyboard */,
 				E507CB6F2A791A6D005198C3 /* Assets.xcassets */,
 				E507CB712A791A6D005198C3 /* LaunchScreen.storyboard */,
@@ -77,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				E507CB7B2A791A82005198C3 /* views */,
-				E507CB802A795D57005198C3 /* data */,
 			);
 			path = ui;
 			sourceTree = "<group>";
