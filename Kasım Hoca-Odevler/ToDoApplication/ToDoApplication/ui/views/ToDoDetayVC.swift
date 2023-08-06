@@ -29,7 +29,7 @@ class ToDoDetayVC: UIViewController {
     }
     
     func update(toDo_id: Int, toDo_name: String){
-        print("Yapılack güncellendi: \(toDo_name)")
+        print("Yapılacak güncellendi: \(toDo_name)")
     }
     
 

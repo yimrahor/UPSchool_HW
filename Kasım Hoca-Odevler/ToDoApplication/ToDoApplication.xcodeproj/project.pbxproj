@@ -16,6 +16,7 @@
 		E507CB7D2A795C9D005198C3 /* ToDoKayitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507CB7C2A795C9D005198C3 /* ToDoKayitVC.swift */; };
 		E507CB7F2A795CB7005198C3 /* ToDoDetayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507CB7E2A795CB7005198C3 /* ToDoDetayVC.swift */; };
 		E507CB832A7965B5005198C3 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507CB822A7965B5005198C3 /* ToDo.swift */; };
+		E520BA052A7E95CD00C3FBB9 /* TodoHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E520BA042A7E95CD00C3FBB9 /* TodoHucre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E507CB7C2A795C9D005198C3 /* ToDoKayitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoKayitVC.swift; sourceTree = "<group>"; };
 		E507CB7E2A795CB7005198C3 /* ToDoDetayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetayVC.swift; sourceTree = "<group>"; };
 		E507CB822A7965B5005198C3 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		E520BA042A7E95CD00C3FBB9 /* TodoHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoHucre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E507CB7A2A791A7A005198C3 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				E520BA032A7E958900C3FBB9 /* tableview */,
 				E507CB7B2A791A82005198C3 /* views */,
 			);
 			path = ui;
@@ -106,6 +109,14 @@
 				E507CB822A7965B5005198C3 /* ToDo.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		E520BA032A7E958900C3FBB9 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				E520BA042A7E95CD00C3FBB9 /* TodoHucre.swift */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				E507CB7F2A795CB7005198C3 /* ToDoDetayVC.swift in Sources */,
 				E507CB7D2A795C9D005198C3 /* ToDoKayitVC.swift in Sources */,
 				E507CB832A7965B5005198C3 /* ToDo.swift in Sources */,
+				E520BA052A7E95CD00C3FBB9 /* TodoHucre.swift in Sources */,
 				E507CB672A791A69005198C3 /* AppDelegate.swift in Sources */,
 				E507CB692A791A69005198C3 /* SceneDelegate.swift in Sources */,
 			);
