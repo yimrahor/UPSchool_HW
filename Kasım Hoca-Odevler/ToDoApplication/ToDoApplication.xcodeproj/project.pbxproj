@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4DF4A172A86D8280010F7E3 /* ToDoDaoRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DF4A162A86D8280010F7E3 /* ToDoDaoRepo.swift */; };
+		A4DF4A1A2A86D8500010F7E3 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DF4A192A86D8500010F7E3 /* AnasayfaViewModel.swift */; };
+		A4DF4A1C2A86D8650010F7E3 /* ToDoKayitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DF4A1B2A86D8650010F7E3 /* ToDoKayitViewModel.swift */; };
+		A4DF4A1E2A86D87D0010F7E3 /* ToDoDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DF4A1D2A86D87D0010F7E3 /* ToDoDetayViewModel.swift */; };
+		A4DF4A212A86DDF30010F7E3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4DF4A202A86DDF30010F7E3 /* RxSwift */; };
 		E507CB672A791A69005198C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507CB662A791A69005198C3 /* AppDelegate.swift */; };
 		E507CB692A791A69005198C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507CB682A791A69005198C3 /* SceneDelegate.swift */; };
 		E507CB6B2A791A69005198C3 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507CB6A2A791A69005198C3 /* Anasayfa.swift */; };
@@ -20,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4DF4A162A86D8280010F7E3 /* ToDoDaoRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDaoRepo.swift; sourceTree = "<group>"; };
+		A4DF4A192A86D8500010F7E3 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		A4DF4A1B2A86D8650010F7E3 /* ToDoKayitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoKayitViewModel.swift; sourceTree = "<group>"; };
+		A4DF4A1D2A86D87D0010F7E3 /* ToDoDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetayViewModel.swift; sourceTree = "<group>"; };
 		E507CB632A791A69005198C3 /* ToDoApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E507CB662A791A69005198C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E507CB682A791A69005198C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +48,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4DF4A212A86DDF30010F7E3 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4DF4A152A86D8010010F7E3 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				A4DF4A162A86D8280010F7E3 /* ToDoDaoRepo.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		A4DF4A182A86D8380010F7E3 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				A4DF4A192A86D8500010F7E3 /* AnasayfaViewModel.swift */,
+				A4DF4A1B2A86D8650010F7E3 /* ToDoKayitViewModel.swift */,
+				A4DF4A1D2A86D87D0010F7E3 /* ToDoDetayViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		E507CB5A2A791A69005198C3 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +107,7 @@
 		E507CB7A2A791A7A005198C3 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				A4DF4A182A86D8380010F7E3 /* viewmodel */,
 				E520BA032A7E958900C3FBB9 /* tableview */,
 				E507CB7B2A791A82005198C3 /* views */,
 			);
@@ -98,6 +127,7 @@
 		E507CB802A795D57005198C3 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				A4DF4A152A86D8010010F7E3 /* repo */,
 				E507CB812A795D67005198C3 /* entity */,
 			);
 			path = data;
@@ -135,6 +165,9 @@
 			dependencies = (
 			);
 			name = ToDoApplication;
+			packageProductDependencies = (
+				A4DF4A202A86DDF30010F7E3 /* RxSwift */,
+			);
 			productName = ToDoApplication;
 			productReference = E507CB632A791A69005198C3 /* ToDoApplication.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +196,9 @@
 				Base,
 			);
 			mainGroup = E507CB5A2A791A69005198C3;
+			packageReferences = (
+				A4DF4A1F2A86DDF30010F7E3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = E507CB642A791A69005198C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,9 +227,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E507CB6B2A791A69005198C3 /* Anasayfa.swift in Sources */,
+				A4DF4A1C2A86D8650010F7E3 /* ToDoKayitViewModel.swift in Sources */,
 				E507CB7F2A795CB7005198C3 /* ToDoDetayVC.swift in Sources */,
 				E507CB7D2A795C9D005198C3 /* ToDoKayitVC.swift in Sources */,
 				E507CB832A7965B5005198C3 /* ToDo.swift in Sources */,
+				A4DF4A1E2A86D87D0010F7E3 /* ToDoDetayViewModel.swift in Sources */,
+				A4DF4A172A86D8280010F7E3 /* ToDoDaoRepo.swift in Sources */,
+				A4DF4A1A2A86D8500010F7E3 /* AnasayfaViewModel.swift in Sources */,
 				E520BA052A7E95CD00C3FBB9 /* TodoHucre.swift in Sources */,
 				E507CB672A791A69005198C3 /* AppDelegate.swift in Sources */,
 				E507CB692A791A69005198C3 /* SceneDelegate.swift in Sources */,
@@ -412,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4DF4A1F2A86DDF30010F7E3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4DF4A202A86DDF30010F7E3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4DF4A1F2A86DDF30010F7E3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E507CB5B2A791A69005198C3 /* Project object */;
 }

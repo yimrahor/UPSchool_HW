@@ -13,6 +13,7 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var todoList = [ToDo]()
+    var viewModel = AnasayfaViewModel()
     
     
     override func viewDidLoad() {
@@ -21,15 +22,14 @@ class Anasayfa: UIViewController {
         todoTableView.delegate = self
         todoTableView.dataSource = self
         
-        let t1 = ToDo(toDo_id: 1, toDo_name: "Go to shopping")
-        let t2 = ToDo(toDo_id: 2, toDo_name: "Have lunch with Maria on Wednesday")
-        let t3 = ToDo(toDo_id: 3, toDo_name: "Develop a new feature for this app")
-        let t4 = ToDo(toDo_id: 4, toDo_name: "Analyze the survey results")
-        
-        todoList.append(t1)
-        todoList.append(t2)
-        todoList.append(t3)
-        todoList.append(t4)
+        _ = viewModel.toDoList.subscribe(onNext: { list in
+            self.todoList = list
+            self.todoTableView.reloadData()
+        })
+    }
+                                         
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.toDoLoad()
     }
 
     
@@ -47,7 +47,7 @@ class Anasayfa: UIViewController {
 
 extension Anasayfa: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Search TO DO: \(searchText)")
+        viewModel.search(searchWord: searchText)
     }
 }
 
@@ -80,12 +80,10 @@ extension Anasayfa:UITableViewDelegate,UITableViewDataSource {
             let td = self.todoList[indexPath.row]
             
             let alert = UIAlertController(title: "Delete", message: "Delete \"\(td.toDo_name!)\" ? ", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
-                print("Selection Canceled")
-            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alert.addAction(cancelAction)
             let okAction = UIAlertAction(title: "OK", style: .destructive) { action in
-                print("TO DO Delete: \(td.toDo_name!)")
+                self.viewModel.delete(toDo_id: td.toDo_id!)
             }
             alert.addAction(okAction)
             self.present(alert,animated: true)

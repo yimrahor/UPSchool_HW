@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class ToDo{
     var toDo_id: Int?
     var toDo_name:String?

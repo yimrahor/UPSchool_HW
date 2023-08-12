@@ -11,7 +11,8 @@ class ToDoKayitVC: UIViewController {
     
     @IBOutlet weak var tfToDoName: UITextField!
     
-
+    var viewModel = ToDoKayitViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,13 +20,8 @@ class ToDoKayitVC: UIViewController {
 
     @IBAction func buttonSaveAct(_ sender: Any) {
         if let doName = tfToDoName.text {
-            save(toDoName: doName)
+            viewModel.save(toDoName: doName)
         }
-    }
-    
-    
-    func save(toDoName:String){
-        print("Yapılacak kaydedildi: \(toDoName)")
     }
     
 }

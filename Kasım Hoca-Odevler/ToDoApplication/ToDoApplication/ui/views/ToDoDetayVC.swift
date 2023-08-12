@@ -12,25 +12,22 @@ class ToDoDetayVC: UIViewController {
     @IBOutlet weak var tfToDoName: UITextField!
     
     var toDo: ToDo?
+    var viewModel = ToDoDetayViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let t = toDo{
             tfToDoName.text = t.toDo_name
         }
-
     }
     
 
     @IBAction func buttonUpdateAct(_ sender: Any) {
         if let to = tfToDoName.text, let t = toDo {
-            update(toDo_id: t.toDo_id!, toDo_name: to)
+            viewModel.update(toDo_id: t.toDo_id!, toDo_name: to)
         }
     }
     
-    func update(toDo_id: Int, toDo_name: String){
-        print("Yapılacak güncellendi: \(toDo_name)")
-    }
-    
+ 
 
 }
