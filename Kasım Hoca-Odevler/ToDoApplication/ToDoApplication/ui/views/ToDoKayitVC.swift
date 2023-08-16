@@ -20,7 +20,7 @@ class ToDoKayitVC: UIViewController {
 
     @IBAction func buttonSaveAct(_ sender: Any) {
         if let doName = tfToDoName.text {
-            viewModel.save(toDoName: doName)
+            viewModel.save(toDo_name: doName)
         }
     }
     

@@ -11,37 +11,83 @@ import RxSwift
 class ToDoDaoRepo{
     
     var toDoList = BehaviorSubject<[ToDo]>(value: [ToDo]())
+    let db:FMDatabase?
     
-    func save(toDoName:String){
-        print("Yapılacak kaydedildi: \(toDoName)")
+    init(){
+        let dosyaYolu = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let veritabaniURL = URL(fileURLWithPath: dosyaYolu).appendingPathComponent("toDo.sqlite")
+        db = FMDatabase(path: veritabaniURL.path)
     }
+    
+    
+    func save(toDo_name:String){
+        db?.open()
+        do{
+            try db!.executeUpdate("INSERT INTO toDo (toDo_name) VALUES (?)", values: [toDo_name])
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
+    
     
     func update(toDo_id: Int, toDo_name: String){
-        print("Yapılacak güncellendi: \(toDo_name)")
+        db?.open()
+        do{
+            try db!.executeUpdate("UPDATE toDo SET toDo_name = ? WHERE toDo_id = ?", values: [toDo_name,toDo_id])
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
+    
     
     func delete(toDo_id:Int){
-        print("Yapılacak silindi: \(toDo_id)")
+        db?.open()
+        do{
+            try db!.executeUpdate("DELETE FROM toDo WHERE toDo_id = ?", values: [toDo_id])
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
+    
     
     func search(searchWord:String){
-        print("Yapılacak ara: \(searchWord)")
+        db?.open()
+        var list = [ToDo]()
+        do {
+            let result = try db!.executeQuery("SELECT * FROM toDo WHERE toDo_name like '%\(searchWord)%'", values: nil)
+            while result.next() {
+                let toDo_id = Int(result.string(forColumn: "toDo_id"))!
+                let toDo_name = result.string(forColumn: "toDo_name")!
+                let td = ToDo(toDo_id: toDo_id, toDo_name: toDo_name)
+                list.append(td)
+            }
+            toDoList.onNext(list)  //Tetikleme
+        }catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
+    
     func toDoLoad(){
+        db?.open()
         var list = [ToDo]()
-        
-        let t1 = ToDo(toDo_id: 1, toDo_name: "Go to shopping")
-        let t2 = ToDo(toDo_id: 2, toDo_name: "Have lunch with Maria on Wednesday")
-        let t3 = ToDo(toDo_id: 3, toDo_name: "Develop a new feature for this app")
-        let t4 = ToDo(toDo_id: 4, toDo_name: "Analyze the survey results")
-        
-        list.append(t1)
-        list.append(t2)
-        list.append(t3)
-        list.append(t4)
-        
-        toDoList.onNext(list) 
+        do {
+            let result = try db!.executeQuery("SELECT * FROM toDo", values: nil)
+            while result.next() {
+                let toDo_id = Int(result.string(forColumn: "toDo_id"))!
+                let toDo_name = result.string(forColumn: "toDo_name")!
+                let td = ToDo(toDo_id: toDo_id, toDo_name: toDo_name)
+                list.append(td)
+            }
+            toDoList.onNext(list)  //Tetikleme
+        }catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
 }

@@ -10,8 +10,8 @@ import Foundation
 class ToDoKayitViewModel{
     var trepo = ToDoDaoRepo()
     
-    func save(toDoName:String){
-        trepo.save(toDoName: toDoName)
+    func save(toDo_name:String){
+        trepo.save(toDo_name: toDo_name)
     }
     
 }

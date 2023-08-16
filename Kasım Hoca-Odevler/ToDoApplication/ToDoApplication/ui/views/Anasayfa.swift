@@ -15,6 +15,9 @@ class Anasayfa: UIViewController {
     var todoList = [ToDo]()
     var viewModel = AnasayfaViewModel()
     
+    var makeSearch = false
+    var searchWord:String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +50,12 @@ class Anasayfa: UIViewController {
 
 extension Anasayfa: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchWord = searchText
+        if searchText == "" {
+            makeSearch = false
+        }else{
+            makeSearch = true
+        }
         viewModel.search(searchWord: searchText)
     }
 }
@@ -84,11 +93,16 @@ extension Anasayfa:UITableViewDelegate,UITableViewDataSource {
             alert.addAction(cancelAction)
             let okAction = UIAlertAction(title: "OK", style: .destructive) { action in
                 self.viewModel.delete(toDo_id: td.toDo_id!)
+                
+                if self.makeSearch {
+                    self.viewModel.search(searchWord: self.searchWord!)
+                }else{
+                    self.viewModel.toDoLoad()
+                }
             }
             alert.addAction(okAction)
             self.present(alert,animated: true)
         }
-        
         deleteAction.image = UIImage(systemName: "trash.fill")
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }

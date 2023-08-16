@@ -13,6 +13,7 @@ class AnasayfaViewModel{
     var toDoList = BehaviorSubject<[ToDo]>(value: [ToDo]())
     
     init() {
+        veritabaniKopyala()
         toDoList = trepo.toDoList
     }
     
@@ -27,6 +28,23 @@ class AnasayfaViewModel{
     
     func toDoLoad(){
         trepo.toDoLoad()
+    }
+    
+    func veritabaniKopyala(){
+        let bundleYolu = Bundle.main.path(forResource: "toDo", ofType: ".sqlite")
+        let dosyaYolu = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let veritabaniURL = URL(fileURLWithPath: dosyaYolu).appendingPathComponent("toDo.sqlite")
+        let fm = FileManager.default
+        
+        if fm.fileExists(atPath: veritabaniURL.path()){
+            print("veritabanı zaten var")
+        }else{
+            do{
+                try fm.copyItem(atPath: bundleYolu!, toPath: veritabaniURL.path)
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
     }
     
 }
